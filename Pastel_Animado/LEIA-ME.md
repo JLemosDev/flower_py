@@ -16,7 +16,7 @@ A organização dos traços segundo os contornos pode ser inferida do cálculo d
 ## Abrir no Windows
 
 1. Instale Python 3.10 ou mais recente, com Tcl/Tk (a instalação padrão do Python para Windows costuma incluir esse componente).
-2. Extraia este ZIP para uma pasta.
+2. Clone ou baixe o repositório e abra a pasta `Pastel_Animado`.
 3. Abra `iniciar_windows.bat`. Na primeira execução, ele cria um ambiente local e instala Pillow e NumPy; essa etapa precisa de internet.
 4. Escolha uma foto no seletor. Para um resultado próximo ao exemplo, use uma foto vertical de flores, colorida e com boa definição.
 5. Aguarde a pintura e clique em **Salvar pintura em PNG**.
@@ -25,7 +25,7 @@ O programa roda no computador. Não há versão executável nem aplicativo Andro
 
 ## Pelo terminal / VS Code
 
-Abra um terminal na pasta extraída:
+Abra um terminal na pasta `Pastel_Animado`:
 
 ```sh
 python -m venv .venv
@@ -73,7 +73,7 @@ O GIF tem lado maior de até 560 px e largura de até 420 px para limitar tamanh
 - `--tamanho 1000`: aumenta o lado maior do PNG e o custo de processamento; padrão: 760. A foto não é ampliada se for menor.
 - `--duracao 16`: duração aproximada da pintura; padrão: 12 segundos. A interface pode levar mais tempo em computadores lentos.
 - `--semente 7`: muda a distribuição dos traços. A mesma foto e semente repetem o resultado.
-- No início da classe `PinturaPastel`, `fundo=(7, 7, 9)` define o fundo.
+- Em `flower_py/render.py`, no início da classe `PinturaPastel`, `fundo=(7, 7, 9)` define o fundo.
 - `escalas` define as cinco espessuras de traço, da maior à menor; `limites` define quantos traços cada camada pode receber.
 
 ## Como funciona
